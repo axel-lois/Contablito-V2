@@ -9,22 +9,62 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="fontAwesome/all.css">
 
 </head>
 
 <body>
-<<<<<<< Updated upstream
 
     
 
-=======
->>>>>>> Stashed changes
+
     <div id="product-container" class="container p-5">
 
         <button id="btn-filter" class="btn btn-info ">filtrar</button>
 
         
         <input type="search" name="search" id="search">
+
+    <div id="product-container" class="container p-3">
+        
+
+        
+        <div class="row">
+            <div id="agregar-productos">
+            <button class="btn btn-info">Agregar producto</button>
+        </div>
+
+            <div class="col text-right">
+                <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+                    <label class="btn btn-info " id="" >
+                        <input type="radio" name="options" autocomplete="off" checked>Precio ascendente
+                    </label>
+                    <label class="btn btn-info" id="" >
+                        <input type="radio" name="options" autocomplete="off">Precio descendente
+                    </label>
+                    <label class="btn btn-light" id="" >
+                        <input type="radio" name="options" autocomplete="off"><i class="fas fa-sort-amount-up mr-1"></i>Cant.Asc
+                    </label>
+                    <label class="btn btn-light" id="" >
+                        <input type="radio" name="options" autocomplete="off"><i class="fas fa-sort-amount-down mr-1"></i>Cant.Desc
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <div id="filtros-abajo">
+            <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+                <label class="btn btn-info " id="" >
+                    <input type="radio" name="options" autocomplete="off" checked>Stock Asc.
+                </label>
+                <label class="btn btn-info" id="" >
+                    <input type="radio" name="options" autocomplete="off">Stock Desc.
+                </label>
+        </div>
+        </div>
+        
+        
+
         <table class="table table-striped fondo">
             <thead>
                 <tr>
@@ -34,6 +74,7 @@
                     <th scope="col" class="text-center">stock</th>
                     <th scope="col" class="text-right">Precio unitario</th>
                     <th scope="col">ID</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -44,10 +85,13 @@
                     <td>n</td>
                     <td class="text-right">n $</td>
                     <td>n ID</td>
+
                 </tr>
             </tbody>
         </table>
     </div>
+    <script src="fontAwesome/all.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

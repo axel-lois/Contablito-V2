@@ -4,3 +4,14 @@ body{
 background: -webkit-linear-gradient(to right, #C4E0E5, #4CA1AF);  
 background: linear-gradient(to right, #C4E0E5, #4CA1AF); 
 } */
+
+#agregar-productos {
+    position: relative;
+    left: 15px;
+}
+#filtros-abajo {
+    position: relative;
+    left: 570px;
+    bottom: 15px;
+    
+}
