@@ -1,17 +1,57 @@
-/*
-body{
-    background: #4CA1AF;  
-background: -webkit-linear-gradient(to right, #C4E0E5, #4CA1AF);  
-background: linear-gradient(to right, #C4E0E5, #4CA1AF); 
-} */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;600;900&display=swap');
 
-#agregar-productos {
-    position: relative;
-    left: 15px;
+nav {
+    font-family: 'Barlow', sans-serif;
 }
-#filtros-abajo {
-    position: relative;
-    left: 570px;
-    bottom: 15px;
+
+body {
+    display: flex;
     
+}
+
+#navbar {
+    background: #2a8c88;
+    height: 100vh;
+    width: 25%;
+}
+#container {
+    
+    background: #e9f0f3;
+    height: 100vh;
+    width: 75%;
+}
+
+#navbar__title {
+    color: #e9f0f3;
+    position: relative;
+    top: 30px;
+    margin: auto 30px;
+}
+
+
+#navbar__products {
+    position: relative;
+    top: 150px;
+    left: 30px;
+}
+#navbar__products h4 {
+    color: #fdffff;
+}
+#navbar__products__add {
+    margin-top: 30px;
+}
+
+#navbar__products a {
+    text-decoration: none;
+}
+.navbar__products__anchor {
+    width: 400px;
+}
+
+.navbar__products__anchor:hover {
+    background: #055552;
+}
+
+strong {
+    background-color: #6db1ae;
 }
