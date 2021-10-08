@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <<<<<<< Updated upstream <nav id="navbar">
+<nav id="navbar">
         <div id="navbar__title">
             <h1> <strong> Contablito V2</strong> </h1> <br>
             <h4>Controla el stock de tus productos de una manera mas sencilla con Contablito.</h4>
@@ -35,8 +35,29 @@
 
         <main id="container">
 
-
-
+            <div class="btn-group">
+                <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  Orden ascendente</button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Nombre</a></li>
+                    <li><a class="dropdown-item" href="#">ID</a></li>
+                    <li><a class="dropdown-item" href="#">Precio</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Limpiar filtros</a></li>
+                </ul>
+              </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  Orden descendente</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Nombre</a></li>
+                  <li><a class="dropdown-item" href="#">ID</a></li>
+                  <li><a class="dropdown-item" href="#">Precio</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Limpiar filtros</a></li>
+                </ul>
+              </div>
+              
 
             <table class="table table-striped fondo">
                 <thead>
@@ -67,42 +88,10 @@
 
         </main>
 
-
-        <<<<<<< HEAD=======>>>>>>> Stashed changes
-            <div id="product-container" class="container p-5">
-
-                <button id="btn-filter" class="btn btn-info ">filtrar</button>
-
-
-                <input type="search" name="search" id="search">
-                <table class="table table-striped fondo">
-                    <thead>
-                        <tr>
-                            <th scope="col"> </th>
-                            <th scope="col">Producto</th>
-                            <th scope="col">descripción</th>
-                            <th scope="col" class="text-center">stock</th>
-                            <th scope="col" class="text-right">Precio unitario</th>
-                            <th scope="col">ID</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
-                            <td>Ejemplo nombre producto</td>
-                            <td>Ejemplo descripcion producto</td>
-                            <td>n</td>
-                            <td class="text-right">n $</td>
-                            <td>n ID</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            =======
             <script src="fontAwesome/all.min.js"></script>
             <script src="bootstrap/bootstrap.bundle.min.js"></script>
             <script src="script.js"></script>
-            >>>>>>> 46c48bed512efd077416d8b012dc57f5ec15e044
+
 </body>
 
 </html>
