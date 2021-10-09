@@ -58,7 +58,7 @@ body {
     
 }
 
-strong {
+#xd {
     background-color: #6db1ae;
 }
 
@@ -127,3 +127,4 @@ input[type=number]::-webkit-inner-spin-button,
       color:rgb(221, 221, 18);
       background-color: #055552;
   }
+
