@@ -57,8 +57,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
                 name: inputs[0].value,
                 description: inputs[1].value,
                 stock: inputs[2].value,
-                unitCost: inputs[4].value,
                 minStock: inputs[3].value,
+                unitCost: inputs[4].value,
                 ID: inputs[5].value
             }
             addLS(valores); //Agrega el objeto al localStorage y muestra una alerta de success

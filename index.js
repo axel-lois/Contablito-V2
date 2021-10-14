@@ -1,3 +1,5 @@
+
+
 let tabla = document.getElementById("tabla");
 let tbody = document.getElementById("tbody");
 let editButton = document.getElementsByClassName("editar");
@@ -9,7 +11,7 @@ let row = document.getElementsByClassName("filas");
 function mostrarProductos() { //Muestra los productos.
     let array = JSON.parse(localStorage.getItem("Datos"));
     for (let i = 0; i < array.length; i++) {
-        tbody.innerHTML += `<tr class="filas ${array[i].minStock > array[i].stock ? "table-danger":""}">    
+        tbody.innerHTML += `<tr class="filas">    
         <td>${array[i].name}</td>
         <td>${array[i].description}</td>
         <td>${array[i].stock}</td>
@@ -17,41 +19,36 @@ function mostrarProductos() { //Muestra los productos.
         <td class="identificadores">${array[i].ID}</td>
         <td class="text-center">
             <button type="button" class="btn btn-success editar" id="editar">Editar</button>
-            <button type="button" class="btn btn-danger eliminar" value="${array[i].ID}" id="eliminar">Eliminar</button>
+            <button type="button" onclick="borrarProducto(${array[i].ID},${array})" class="btn btn-danger eliminar" id="eliminar">Eliminar</button>
         </td>
     </tr>`
-    };
-};  
-
-    editButton.for (let index = 0; index < array.length; index++) {
-        const element = array[index];
         
+        // console.log("minstock: " + array[i].minStock + " Stock: " + array[i].stock);
+        // if(array[i].minStock >= array[i].stock) {
+        //     row[i].classList.add("table-danger");
+        // }
+    };
+    borrarProducto();
+};
+
+
+function borrarProducto(ID,array) {
+    if(compararID(ID)) {
+        
+
     }
-     
+};
 
-     console.log(editButton)
+function editarProducto() {
 
-    // deleteButton.addEventListener("click",()=>{
+};
 
-    // });
+function asc() {
 
+};
 
-    function borrarProducto() {
+function desc() {
 
-    };
-
-    function editarProducto() {
-
-    };
-    
-    function asc() {
-
-    };
-    
-    function desc() {
-
-    };
+};
 
 mostrarProductos();
-
-
