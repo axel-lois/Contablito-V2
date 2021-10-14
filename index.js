@@ -9,7 +9,7 @@ let row = document.getElementsByClassName("filas");
 function mostrarProductos() { //Muestra los productos.
     let array = JSON.parse(localStorage.getItem("Datos"));
     for (let i = 0; i < array.length; i++) {
-        tbody.innerHTML += `<tr class="filas">    
+        tbody.innerHTML += `<tr class="filas ${array[i].minStock > array[i].stock ? "table-danger":""}">    
         <td>${array[i].name}</td>
         <td>${array[i].description}</td>
         <td>${array[i].stock}</td>
@@ -39,15 +39,16 @@ function mostrarProductos() { //Muestra los productos.
     };
 
     
-    function ascByName() {
+    function asc() {
 
     };
     
-    function descByName() {
+    function desc() {
 
     };
 
 
 
 mostrarProductos();
+
 
