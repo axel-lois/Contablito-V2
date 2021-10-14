@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="navbar__title">
+            <h1> <strong id="xd"> Contablito V2</strong> </h1> <br>
+            <h4>Controla el stock de tus productos de una manera mas sencilla con Contablito.</h4>
+        </div>
+
+        <div id="navbar__products">
+            <div class="navbar__products__anchor">
+                <a href="index.html">
+                    <h4>Productos</h4>
+                </a>
+            </div>
+            <div class="navbar__products__anchor">
+                <a href="add_products.html">
+                    <h4 id="navbar__products__add">Agregar productos </h4>
+                </a>
+            </div>
+        </div>
+
+    </nav>
+
+    <main id="container">
+        <div id="form__title">
+        <h2 style="text-align: center; font-size: xx-large; font-weight:bold;">Nuevo producto</h2>
+        </div>
+        <div id="form__container">
+            <form id="form">
+                <img class="page__logo" src="img/Contablito__logo.jpeg" alt="Logo de contablito" width="100px" height="100px">
+                <div class="form__container__child">
+                    <label style="font-weight: bold;" for="input1"> Nombre del producto <br>
+                        <input name="input1" type="text" id="nombre" class="form__container__input" 
+                            placeholder="Ingrese nombre...">
+                    </label> <br>
+                </div>
+                <div class="form__container__child">
+                    <label style="font-weight: bold;" for="input2"> Descripcion del producto <br>
+                        <input name="input2" type="text" id="descripcion" class="form__container__input"
+                            placeholder="Ingrese descripcion...">
+                    </label> <br>
+                </div>
+
+                <div class="form__container__child">
+                    <label style="font-weight: bold;" for="input3"> Stock <br>
+                        <input name="input3" type="number" id="stock" class="form__container__input" 
+                            placeholder="Ingrese cantidad de stock...">
+                    </label>
+                </div>
+
+                <div class="form__container__child">
+                    <label style="font-weight: bold;" for="input4"> Alerta de stock minimo <br>
+                        <input name="input4" type="number" id="alerta" class="form__container__input" 
+                            placeholder="Ingrese cantidad minima de stock...">
+                    </label> <br>
+                </div>
+
+                <div class="form__container__child">
+                    <label style="font-weight: bold;" for="input5"> Precio unitario <br>
+                        <input name="input5" type="number" id="precio" class="form__container__input" 
+                            placeholder="Ingrese precio unitario...">
+                    </label> <br>
+                </div>
+
+                <div class="form__container__child">
+                    <label style="font-weight: bold;" for="input6"> ID <br>
+                        <input name="input6" type="number" id="ID" class="form__container__input" 
+                            placeholder="Ingrese ID (para identificarlo)">
+                    </label>
+                </div>
+                
+                <div class="form__container__button ">
+                    <input type="submit" class="submit" id="submit" value="Agregar producto">
+                </div>
+            </form>
+            <div id="alert">
+                
+            </div>
+
+        </div>
+
+
+    </main>
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="add_products.js"></script>
+</body>
+
+</html>
