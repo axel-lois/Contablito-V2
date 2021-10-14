@@ -1,7 +1,7 @@
 let tabla = document.getElementById("tabla");
 let tbody = document.getElementById("tbody");
-let editButton = document.getElementById("editar");
-let deleteButton = document.getElementById("eliminar");
+let editButton = document.getElementsByClassName("editar");
+let deleteButton = document.getElementsByClassName("eliminar");
 let row = document.getElementsByClassName("filas");
 
 
@@ -15,15 +15,21 @@ function mostrarProductos() { //Muestra los productos.
         <td>${array[i].stock}</td>
         <td class="text-right"> $${array[i].unitCost}</td>
         <td class="identificadores">${array[i].ID}</td>
-        <td class="text-center"> <button type="button" class="btn btn-success" id="editar">Editar</button>
-            <button type="button" class="btn btn-danger" id="eliminar">Eliminar</button>
+        <td class="text-center">
+            <button type="button" class="btn btn-success editar" id="editar">Editar</button>
+            <button type="button" class="btn btn-danger eliminar" value="${array[i].ID}" id="eliminar">Eliminar</button>
         </td>
     </tr>`
-    }
-};
-    // editButton.addEventListener("click",()=>{
+    };
+};  
 
-    // });
+    editButton.for (let index = 0; index < array.length; index++) {
+        const element = array[index];
+        
+    }
+     
+
+     console.log(editButton)
 
     // deleteButton.addEventListener("click",()=>{
 
@@ -37,7 +43,6 @@ function mostrarProductos() { //Muestra los productos.
     function editarProducto() {
 
     };
-
     
     function asc() {
 
@@ -46,8 +51,6 @@ function mostrarProductos() { //Muestra los productos.
     function desc() {
 
     };
-
-
 
 mostrarProductos();
 

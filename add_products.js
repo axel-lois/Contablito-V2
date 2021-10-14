@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
             }
         }
     }
+
     function addLS(valores) { //Agregar datos al localStorage
         let arreglo = [];
         if (localStorage.getItem("Datos")) {
@@ -75,3 +76,4 @@ document.addEventListener("DOMContentLoaded", function (e) {
         }
     });
 });
+
