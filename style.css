@@ -6,13 +6,15 @@ nav {
 
 body {
     display: flex;
-    
+    overflow: hidden;
+
 }
 
 #navbar {
     background: #2a8c88;
     height: 100vh;
     width: 25%;
+    overflow: hidden;
 }
 #container {
     background: #e9f0f3;
@@ -40,6 +42,9 @@ body {
 #navbar__products h4:hover {
     color: rgb(221, 221, 18);
 }
+#navbar__products h4:active {
+    color: rgb(243, 243, 16);
+}
 
 #navbar__products__add {
     margin-top: 30px;
@@ -53,10 +58,12 @@ body {
     width: 400px;
 }
 
-.navbar__products__anchor:hover {
+
+ /* Modificado para hacer responsive mas facil */
+/* .navbar__products__anchor:hover {
     background: #055552;
     
-}
+} */
 
 #xd  {
     background-color: #6db1ae;
