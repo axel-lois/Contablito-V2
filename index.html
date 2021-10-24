@@ -12,7 +12,7 @@
 </head>
 
 <body>
-<nav id="navbar">
+    <nav id="navbar">
         <div id="navbar__title">
             <h1> <strong id="xd"> Contablito V2</strong> </h1> <br>
             <h4>Controla el stock de tus productos de una manera mas sencilla con Contablito.</h4>
@@ -31,34 +31,10 @@
             </div>
         </div>
 
-        </nav>
+    </nav>
 
-        <main id="container">
-
-            <div class="btn-group">
-                <button type="button" style="background-color: #2a8c88 ; color: #fff; border: none;" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                  Orden ascendente</button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Nombre</a></li>
-                    <li><a class="dropdown-item" href="#">ID</a></li>
-                    <li><a class="dropdown-item" href="#">Precio</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Limpiar filtros</a></li>
-                </ul>
-              </div>
-            <div class="btn-group">
-                <button type="button"  style="background-color: #2a8c88 ; color: #fff; border: none;" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                  Orden descendente</button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Nombre</a></li>
-                  <li><a class="dropdown-item" href="#">ID</a></li>
-                  <li><a class="dropdown-item" href="#">Precio</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Limpiar filtros</a></li>
-                </ul>
-              </div>
-              
-
+    <main id="container">
+        <div class="table-responsive">
             <table class="table table-striped fondo table-hover" id="tabla">
                 <thead>
                     <tr>
@@ -84,12 +60,13 @@
                     </tr> -->
                 </tbody>
             </table>
-        </main>
+        </div>
+    </main>
 
-            <script src="fontAwesome/all.min.js"></script>
-            <script src="bootstrap/bootstrap.bundle.min.js"></script>
-            <script src="index.js"></script>
-            
+    <script src="fontAwesome/all.min.js"></script>
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+
 </body>
 
 </html>

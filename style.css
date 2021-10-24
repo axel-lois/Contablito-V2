@@ -6,42 +6,63 @@ nav {
 
 body {
     display: flex;
-    overflow: hidden;
-
 }
 
 #navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
     background: #2a8c88;
     height: 100vh;
     width: 25%;
     overflow: hidden;
 }
+
 #container {
     background: #e9f0f3;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     height: 100vh;
     width: 75%;
     overflow: auto;
 }
+.add__container {
+    background: #e9f0f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 75%;
+    overflow: hidden;
+}
+
 
 #navbar__title {
     color: #e9f0f3;
-    position: relative;
-    top: 30px;
-    margin: auto 30px;
 }
 
 
 #navbar__products {
-    position: relative;
-    top: 150px;
-    left: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 350px;
+    width: 100%;
 }
+
 #navbar__products h4 {
     color: #fdffff;
 }
+
 #navbar__products h4:hover {
     color: rgb(221, 221, 18);
 }
+
 #navbar__products h4:active {
     color: rgb(243, 243, 16);
 }
@@ -55,84 +76,143 @@ body {
 }
 
 .navbar__products__anchor {
-    width: 400px;
+    width: 100%
 }
 
 
- /* Modificado para hacer responsive mas facil */
-/* .navbar__products__anchor:hover {
-    background: #055552;
-    
-} */
-
-#xd  {
+#xd {
     background-color: #6db1ae;
 }
 
 #form__container {
-    position: absolute;
     font-family: 'Barlow', sans-serif;
-    top: 15%;
-    left: 43%;
+    margin: 2% auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     box-shadow: 0px 10px 10px -6px black;
     border-radius: 15px;
-    height: 630px;
-    width: 800px;
+    height: 600px;
+    width: 65%;
+    
     background-color: #ffffff;
 }
 
 
-input[type=number]::-webkit-inner-spin-button, 
-    input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none; 
-      margin: 0; 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .form__container__child {
-    position: relative;
-    left: 20px;
-    top:40px;
+    width: 90%;
     margin-top: 10px;
 }
 
 .form__container__input {
-    width: 760px;
+    width: 100%;
     border: none;
     outline: none;
     border-bottom: 2px solid black;
 }
 
-.page__logo {
-    position: relative;
-    top: 20px;
-    left: 350px;
-}
 
 #form__title {
-    position: absolute;
-    top: 70px;
-    left: 1080px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+label {
+    width: 100%;
+}
+
+.form__container__button {
+    width: 90%;
+
+    margin-top: 2%;
+}
+
+.submit {
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    background: #2a8c88;
+    font-size: x-large;
+    font-weight: 600;
+    color: #ffffff;
+    height: 50px;
+}
+
+.submit:hover {
+    color: rgb(221, 221, 18);
+    background-color: #055552;
+}
+
+@media screen and (max-width:1600px) { 
+    #form__container{
+        width: 70%;
+    }
 }
 
 
-  .form__container__button {
-    position: relative;
-    left: 20px;
-    top:60px;
-    margin-top: 10px;
-  }
-  .submit {
-      width: 760px;
-      border: none;
-      background:#2a8c88 ;
-      font-size:x-large;
-      font-weight:600;
-      color: #ffffff;
-      height: 50px;
-  }
+@media screen and (max-width:1500px) { 
+    #form__container{
+        width: 80%;
+    }
+}
 
-  .submit:hover {
-      color:rgb(221, 221, 18);
-      background-color: #055552;
-  }
+@media screen and (max-width:1400px) { 
+    #form__container{
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-width:700px) {
+    body {
+        flex-direction: column;
+    }
+    #navbar {
+        width: 100%;
+        height: 260px
+    }
+    #container {
+        width: 100%;
+    }
+    .add__container {
+        width: 100%;
+    }
+    #form__container {
+        width: 90%;
+    }
+
+    #navbar__title h1 {
+        font-size: 23px;
+    }
+    #navbar__title h4 {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    #navbar__products h4 {
+        font-size: 18px;
+
+    }
+    #navbar__products__add {
+        margin-top: 10px;
+    }
+}
 
