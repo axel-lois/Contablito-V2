@@ -1,5 +1,3 @@
-
-
 let tabla = document.getElementById("tabla");
 let tbody = document.getElementById("tbody");
 let editButton = document.getElementsByClassName("editar");
@@ -19,37 +17,38 @@ function mostrarProductos() { //Muestra los productos.
         <td class="identificadores">${arreglo[i].ID}</td>
         <td class="text-center">
             <button type="button" onclick="editarProducto(${i})" class="btn btn-success editar" id="editar">Editar</button>
-            <button type="button" onclick="borrarProducto(${arreglo[i].ID},${i})" class="btn btn-danger eliminar" id="eliminar">Eliminar</button>
+            <button type="button" onclick="borrarProducto(${i})" class="btn btn-danger eliminar" id="eliminar">Eliminar</button>
         </td>
     </tr>`
         
-        // console.log("minstock: " + array[i].minStock + " Stock: " + array[i].stock);
-        // if(array[i].minStock >= array[i].stock) {
+        console.log("minstock: " + arreglo[i].minStock + " Stock: " + arreglo[i].stock + " Precio: " + arreglo[i].unitCost);
+        // if(arreglo[i].minStock >= arreglo[i].stock) {
         //     row[i].classList.add("table-danger");
         // }
+        
     };
 };
 
 
-function borrarProducto(ID,index) { //Saca el producto del localStorage.w
+function borrarProducto(index) { //Saca el producto del localStorage.
     arreglo.splice(index,1);
     localStorage.setItem("Datos",JSON.stringify(arreglo));
     mostrarProductos(); //Debo volver a mostrar todo pero sin ese elemento
 };
 
 function editarProducto(index) {
-    
-
-
-
+    let obj =  arreglo[index];
+    obj = Object.defineProperty(obj, "index",{value: index, writable: true, enumerable:true});
+    localStorage.setItem("modifiedObject",JSON.stringify(obj));
+    location.href = "add_products.html";
 };
 
-function asc() {
+// function asc() {
 
-};
+// };
 
-function desc() {
+// function desc() {
 
-};
+// };
 
 mostrarProductos();

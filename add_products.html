@@ -13,7 +13,7 @@
 <body>
     <nav id="navbar">
         <div id="navbar__title">
-            <h1> <strong id="xd"> Contablito V2</strong> </h1> <br>
+            <img class="navbar__img" src="img/Contablito__logo.jpeg" alt="" height="150px" width="150px"> <br>
             <h4>Controla el stock de tus productos de una manera mas sencilla con Contablito.</h4>
         </div>
 
@@ -34,7 +34,7 @@
 
     <main class="add__container">
         <div id="form__title">
-            <h2 style="text-align: center; font-size: xx-large; font-weight:bold;">Nuevo producto</h2>
+            <h2 style="text-align: center; font-size: xx-large; font-weight:bold;" id="titulo">Nuevo producto</h2>
         </div>
         <div id="form__container">
             <div class="form__image">
@@ -71,13 +71,13 @@
 
                 <div class="form__container__child">
                     <label style="font-weight: bold;" for="input5"> Precio unitario <br>
-                        <input name="input5" type="number" id="precio" class="form__container__input"
+                        <input name="input5" type="number" id="precio" min="1" class="form__container__input"
                             placeholder="Ingrese precio unitario...">
                     </label> <br>
                 </div>
 
                 <div class="form__container__child">
-                    <label style="font-weight: bold;" for="input6"> ID <br>
+                    <label style="font-weight: bold;" for="input6"> <span id="modifyID"> ID </span> <br>
                         <input name="input6" type="number" id="ID" class="form__container__input"
                             placeholder="Ingrese ID (para identificarlo)">
                     </label>
