@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
         form.addEventListener("submit", function (e) { //Evento para el formulario
 
             e.preventDefault();
+            
             if (inputs[0].value == "" || inputs[1].value == "" || inputs[2].value == "" || inputs[3].value == "" || inputs[4].value == "" || inputs[5].value == "") { //Si faltan datos que muestre una alerta
                 alert.innerHTML = `<div class="alert alert-danger" style=" margin-top: 15px; text-align:center" role="alert">
                 <strong>Por favor llene todos los campos para continuar.</strong> `
@@ -80,9 +81,11 @@ document.addEventListener("DOMContentLoaded", function (e) {
                 }, 3000);
             }
             else {//crea un objeto
+                let nombre = inputs[0].value;
+                let descr = inputs[1].value;
                 let valores = {
-                    name: inputs[0].value,
-                    description: inputs[1].value,
+                    name: nombre.toLowerCase(),
+                    description: descr.toLowerCase(),
                     stock: inputs[2].value,
                     minStock: inputs[3].value,
                     unitCost: inputs[4].value,
@@ -127,6 +130,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
         arreglo.push(valores);
         localStorage.setItem("Datos", JSON.stringify(arreglo));
     }
-
 });
+
 

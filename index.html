@@ -61,6 +61,31 @@
                 </tbody>
             </table>
         </div>
+
+        <div class="filtros">
+        <div class="btn-group dropup me-5" id="filter__button__1">
+            <button type="button" class="btn btn-success dropdown-toggle" style="background-color: #2a8c88!important;" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-sort-amount-up"></i> Filtro asc.
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item active asc__filter" href="#">Prdocuto</a></li>
+              <li><a class="dropdown-item asc__filter" href="#">Stock</a></li>
+              <li><a class="dropdown-item asc__filter" href="#">Precio</a></li>
+            </ul>
+          </div>
+
+          <div class="btn-group dropup ms-5" id="filter__button__2">
+            <button type="button" class="btn btn-danger dropdown-toggle"  data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-sort-amount-down"></i> Filtro desc.
+            </button>
+            <ul class="dropdown-menu">
+                <li> <a href="#" class="dropdown-item active desc__filter">Producto</a></li>
+                <li> <a href="#" class="dropdown-item desc__filter">Stock</a></li>
+              <li> <a href="#" class="dropdown-item desc__filter"> Precio</a></li>
+            </ul>
+          </div>
+        </div>
+
     </main>
 
     <script src="fontAwesome/all.min.js"></script>

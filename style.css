@@ -167,6 +167,25 @@ label {
     background-color: #055552;
 }
 
+#filter__button__1{
+    width: 8%;
+    
+}
+
+#filter__button__2 {
+    width: 8%;
+}
+
+.filtros {
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 60px;
+    bottom: 20px;
+    right:60px
+    
+}
+
 @media screen and (max-width:1600px) { 
     #form__container{
         width: 70%;
@@ -232,5 +251,25 @@ label {
         width: 80px;
         height: 80px;
     }
+}
+
+@media screen and (max-width:400px) {
+    .add__container {
+        flex-wrap: nowrap;
+    }
+    #navbar {
+        height: 300px
+    }
+    #navbar__title h4{
+        font-size: 16px;
+    }
+   
+}
+
+@media screen and  (max-width:320px){
+    #titulo {
+        margin-top: 40px !important;
+    }
+    
 }
 

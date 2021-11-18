@@ -4,6 +4,9 @@ let editButton = document.getElementsByClassName("editar");
 let deleteButton = document.getElementsByClassName("eliminar");
 let row = document.getElementsByClassName("filas");
 let arreglo = JSON.parse(localStorage.getItem("Datos"));
+let asc_filter = document.getElementsByClassName("asc__filter");
+let desc_filter = document.getElementsByClassName("desc__filter")
+
 
 
 function mostrarProductos() { //Muestra los productos.
@@ -22,9 +25,9 @@ function mostrarProductos() { //Muestra los productos.
     </tr>`
         
         console.log("minstock: " + arreglo[i].minStock + " Stock: " + arreglo[i].stock + " Precio: " + arreglo[i].unitCost);
-        // if(arreglo[i].minStock >= arreglo[i].stock) {
-        //     row[i].classList.add("table-danger");
-        // }
+        if(parseInt(arreglo[i].minStock) >= parseInt(arreglo[i].stock)) {
+            row[i].classList.add("table-danger");
+        }
         
     };
 };
@@ -43,12 +46,86 @@ function editarProducto(index) {
     location.href = "add_products.html";
 };
 
-// function asc() {
+function asc(criterio,i) {
+    let arreglo = JSON.parse(localStorage.getItem("Datos"));
+    arreglo = arreglo.sort(function(a,b){
+        if (i != 0) {
+            var aXD = parseInt(a[criterio]);
+            var bXD = parseInt(b[criterio]);
+        }
+        else {
+            var aXD = a[criterio];
+            var bXD = b[criterio];
+        }
 
-// };
+        if(aXD > bXD) 
+            return 1;
+        else if (bXD > aXD)
+            return -1;
+        else
+            return 0;
+    })
+    localStorage.setItem("Datos",JSON.stringify(arreglo));
+    mostrarProductos();
+    window.location.reload();
+};
 
-// function desc() {
 
-// };
 
-mostrarProductos();
+
+function desc(criterio,i) {
+    let arreglo = JSON.parse(localStorage.getItem("Datos"));
+    arreglo = arreglo.sort(function(a,b){
+        if (i != 0) {
+            var aXD = parseInt(a[criterio]);
+            var bXD = parseInt(b[criterio])
+        }
+        else {
+            var aXD = a[criterio];
+            var bXD = b[criterio];
+        }
+        if (aXD > bXD) 
+            return -1;
+        else if (bXD > aXD)
+            return 1;
+        else
+            return 0;
+    })
+    localStorage.setItem("Datos",JSON.stringify(arreglo));
+    mostrarProductos();
+    window.location.reload();
+};
+
+
+
+
+
+
+
+//filtros
+for(let i = 0; i < asc_filter.length; i++) {
+    asc_filter[i].addEventListener("click",function(){
+        if (i === 0)
+            asc("name",0);
+        if (i === 1)
+            asc("stock",1);
+        if (i === 2)
+            asc("unitCost",2);
+    })
+}
+
+for(let i = 0; i < asc_filter.length; i++) {
+    desc_filter[i].addEventListener("click",function() {
+        if (i === 0)
+            desc("name",0);
+        if (i === 1)
+            desc("stock",1);
+        if(i === 2)
+            desc("unitCost",2);
+    }) 
+}
+
+
+document.addEventListener("DOMContentLoaded",function(){
+    mostrarProductos();
+})
