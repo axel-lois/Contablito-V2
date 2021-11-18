@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
                 }
                 addLS(valores); //Agrega el objeto al localStorage y muestra una alerta de success
                 alert.innerHTML = `<div class="alert alert-success" style="margin-top: 15px; text-align:center" role="alert">
-            <strong>Su producto ha sido agregado satisfactoriamente. </strong>
+            <strong> <i class="fas fa-check-circle"></i> Su producto ha sido agregado satisfactoriamente. </strong>
           </div>`
                 form_container.style.height = "643px"
                 setTimeout(() => {

@@ -34,9 +34,17 @@ function mostrarProductos() { //Muestra los productos.
 
 
 function borrarProducto(index) { //Saca el producto del localStorage.
+    let alerta =  document.getElementById("alert");
     arreglo.splice(index,1);
     localStorage.setItem("Datos",JSON.stringify(arreglo));
     mostrarProductos(); //Debo volver a mostrar todo pero sin ese elemento
+    alerta.innerHTML = `<div class="alert alert-success" style="margin-top: 15px; text-align:center; margin-right: 30px; margin-left: 30px;  " role="alert">
+    <strong> <i class="fas fa-check-circle"></i> Su producto ha sido eliminado satisfactoriamente. </strong>
+  </div>`
+  setTimeout(() => {
+    alerta.innerHTML = "";
+}, 2000);
+
 };
 
 function editarProducto(index) {
